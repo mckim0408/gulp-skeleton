@@ -15,7 +15,9 @@
     "@babel/preset-env": "^7.11.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
+    "gulp-ejs": "^5.1.0",
     "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
     "node-sass": "^4.14.1"
   },
   "dependencies": {

@@ -40,7 +40,7 @@ gulp.task('image', function(){
         .pipe(gulp.dest('dist'))
 });
 
-gulp.task('js:watch', function(){
+gulp.task('es6:watch', function(){
     gulp.watch('src/**/*.js', gulp.task('es6'));
 });
 gulp.task('ts:watch', function(){
@@ -56,4 +56,5 @@ gulp.task('image:watch', function(){
     gulp.watch('src/**/images/*', gulp.task('image'));
 });
 
-gulp.task('default', gulp.parallel('js:watch', 'ts:watch', 'scss:watch', 'ejs:watch'));
+gulp.task('default', gulp.parallel('es6:watch', 'ts:watch', 'scss:watch', 'ejs:watch'));
+gulp.task('all', gulp.parallel('es6', 'ts', 'scss', 'ejs', 'image'));

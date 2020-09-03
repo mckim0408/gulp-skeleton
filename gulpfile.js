@@ -4,6 +4,7 @@ const uglify = require('gulp-uglify');
 const ts = require('gulp-typescript');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
 const ejs = require('gulp-ejs');
 const imagemin = require('gulp-imagemin');
 
@@ -21,6 +22,7 @@ gulp.task('scss', function(){
     return gulp.src('src/**/*.scss')
     .pipe(autoprefixer())
     .pipe(sass())
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest("dist"));
 });
 gulp.task('ts', function () {
